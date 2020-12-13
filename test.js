@@ -1,13 +1,7 @@
 const test = require("ava")
-const theModule = require(".")
+const glueText = require(".")
 
 test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.is(glueText("a b c"), "a\u00A0b\u00A0c")
+	t.is(glueText("o-o"), "o-⁠o")
 })

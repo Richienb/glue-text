@@ -1,15 +1,21 @@
 /**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
+Ensure text is not broken when its container is resized.
+
+@param input The text to glue.
+
 @example
 ```
-const theModule = require("the-module")
+const glueText = require("glue-text")
 
-theModule("unicorns")
-//=> "unicorns & rainbows"
+// Add no-break spaces
+glueText("a b c")
+//=> "a b ⁠c"
+
+// Add word joiners
+glueText("o-o")
+//=> "o-⁠o"
 ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+declare function glueText(input: string): string
 
-export = theModule
+export = glueText

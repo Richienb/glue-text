@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "glue-text",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Ensure text is not broken when its container is resized.",
+	"repository": "https://github.com/Richienb/glue-text.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,17 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"text",
+		"kaomoji",
+		"joiner",
+		"break",
+		"wrap",
+		"space"
+	],
+	"dependencies": {
+		"linebreak": "^1.0.2"
+	},
 	"devDependencies": {
 		"ava": "^3.13.0",
 		"eslint-config-richienb": "^0.5.0",

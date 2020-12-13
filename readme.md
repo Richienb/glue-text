@@ -1,41 +1,35 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# glue-text [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/glue-text/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/glue-text)
 
-My awesome module.
+Ensure text is not broken when its container is resized. Useful for ensuring [kaomoji remain together](https://getdango.com/unbreakable-kaomoji/).
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/glue-text.png)](https://npmjs.com/package/glue-text)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install glue-text
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module")
+const glueText = require("glue-text")
 
-theModule("unicorns")
-//=> "unicorns & rainbows"
+// Add no-break spaces
+glueText("a b c")
+//=> "a b ⁠c"
+
+// Add word joiners
+glueText("o-o")
+//=> "o-⁠o"
 ```
 
 ## API
 
-### theModule(input, options?)
+### glueText(input)
 
 #### input
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The text to glue.
