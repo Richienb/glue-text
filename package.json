@@ -1,6 +1,6 @@
 {
 	"name": "glue-text",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Ensure text is not broken when its container is resized.",
 	"repository": "https://github.com/Richienb/glue-text.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
